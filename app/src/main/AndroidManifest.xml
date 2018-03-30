@@ -16,10 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".XianActivity" />
-        <activity android:name=".BeijingActivity" />
-        <activity android:name=".ChengduActivity" />
-        <activity android:name=".XiamenActivity" />
         <activity android:name=".ContentActivity"
             android:label="Introduction"
             android:parentActivityName=".MainActivity"/>

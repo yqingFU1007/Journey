@@ -18,11 +18,11 @@ public class ContentActivity extends AppCompatActivity {
         TextView textViewContent = (TextView) this.findViewById(R.id.content);
 
         Intent intent = getIntent();
-        String placeName = intent.getStringExtra("placeName");
+        int placeNameRs = intent.getIntExtra("placeNameRs",0);
         int placeIntroId = intent.getIntExtra("placeIntroId", 0);
         int placeImageId = intent.getIntExtra("placeImageId", 0);
 
-        textViewTitle.setText(placeName);
+        textViewTitle.setText(placeNameRs);
         textViewContent.setText(placeIntroId);
         imageView.setImageResource(placeImageId);
     }

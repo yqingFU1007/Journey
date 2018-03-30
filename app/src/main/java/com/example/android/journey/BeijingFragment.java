@@ -30,17 +30,17 @@ public class BeijingFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list_view, container, false);
 
         final ArrayList<Places> placesBeijing = new ArrayList<>();
-        placesBeijing.add(new Places("故宫", R.drawable.gu_gong,
+        placesBeijing.add(new Places(R.string.gugong, R.drawable.gu_gong,
                 R.string.gugong_intro, R.drawable.gu_gong_s));
-        placesBeijing.add(new Places("天坛", R.drawable.tian_tan,
+        placesBeijing.add(new Places(R.string.tiantan, R.drawable.tian_tan,
                 R.string.tiantan_intro, R.drawable.tian_tan_s));
-        placesBeijing.add(new Places("颐和园", R.drawable.yi_he_yuan,
+        placesBeijing.add(new Places(R.string.yiheyuan, R.drawable.yi_he_yuan,
                 R.string.yiheyuan_intro, R.drawable.yi_he_yuan_s));
-        placesBeijing.add(new Places("圆明园", R.drawable.yuan_ming_yuan,
+        placesBeijing.add(new Places(R.string.yuanmingyuan, R.drawable.yuan_ming_yuan,
                 R.string.yuanmingyuan_intro, R.drawable.yuan_ming_yuan_s));
-        placesBeijing.add(new Places("国家体育场", R.drawable.niao_chao,
+        placesBeijing.add(new Places(R.string.niaochao, R.drawable.niao_chao,
                 R.string.niaochao_intro, R.drawable.niao_chao_s));
-        placesBeijing.add(new Places("长城", R.drawable.chang_cheng,
+        placesBeijing.add(new Places(R.string.changcheng, R.drawable.chang_cheng,
                 R.string.changcheng_intro, R.drawable.chang_cheng_s));
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), placesBeijing);
@@ -54,12 +54,12 @@ public class BeijingFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), ContentActivity.class);
 
-                String placeName = placesBeijing.get(position).getmPlaceName();
+                int placeNameRs = placesBeijing.get(position).getmPlaceNameRs();
                 int placeIntroId = placesBeijing.get(position).getmPlaceIntroId();
                 int placeImageId = placesBeijing.get(position).getmImageId();
 
                 Bundle bundle = new Bundle();
-                bundle.putString("placeName", placeName);
+                bundle.putInt("placeNameRs", placeNameRs);
                 bundle.putInt("placeIntroId", placeIntroId);
                 bundle.putInt("placeImageId", placeImageId);
                 intent.putExtras(bundle);

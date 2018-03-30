@@ -6,19 +6,19 @@ package com.example.android.journey;
 
 public class Places {
     private int mImageId;
-    private String mPlaceName;
+    private int mPlaceNameRs;
     private int mPlaceIntroId;
     private int mImageIdSmall;
 
-    public Places(String placeName, int imageId, int placeIntroId, int imageIdSmall) {
+    public Places(int placeNameRs, int imageId, int placeIntroId, int imageIdSmall) {
         mImageId = imageId;
-        mPlaceName = placeName;
+        mPlaceNameRs = placeNameRs;
         mPlaceIntroId = placeIntroId;
         mImageIdSmall = imageIdSmall;
     }
 
-    public String getmPlaceName() {
-        return mPlaceName;
+    public int getmPlaceNameRs() {
+        return mPlaceNameRs;
     }
 
     public int getmImageId() {

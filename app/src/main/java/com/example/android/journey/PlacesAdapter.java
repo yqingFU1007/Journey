@@ -35,8 +35,6 @@ public class PlacesAdapter extends ArrayAdapter<Places> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
-
-
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
@@ -55,7 +53,7 @@ public class PlacesAdapter extends ArrayAdapter<Places> {
         botton.setBackgroundColor(color);
 
         TextView textView = (TextView) listItemView.findViewById(R.id.place_name);
-        textView.setText(placesCurrent.getmPlaceName());
+        textView.setText(placesCurrent.getmPlaceNameRs());
 
         textView.setBackgroundColor(color);
 

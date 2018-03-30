@@ -31,7 +31,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="30sp"
                 tools:text="秦始皇陵兵马俑" />
 

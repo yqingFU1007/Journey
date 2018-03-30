@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CategoryAdapter extends FragmentPagerAdapter {
     private Context mContext;
+    final int PAGE_NUM = 4;
 
     public CategoryAdapter(FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
@@ -33,7 +34,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return PAGE_NUM;
     }
 
     @Override
