@@ -9,10 +9,10 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by apple on 2018/3/29.
  */
 
-public class CategoryAdapter extends FragmentPagerAdapter{
+public class CategoryAdapter extends FragmentPagerAdapter {
     private Context mContext;
 
-    public CategoryAdapter (FragmentManager fragmentManager, Context context){
+    public CategoryAdapter(FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
         mContext = context;
     }
@@ -22,14 +22,11 @@ public class CategoryAdapter extends FragmentPagerAdapter{
     public Fragment getItem(int position) {
         if (position == 0) {
             return new XianFragment();
-        }
-        else if (position == 1){
+        } else if (position == 1) {
             return new BeijingFragment();
-        }
-        else if (position == 2){
+        } else if (position == 2) {
             return new ChengduFragment();
-        }
-        else {
+        } else {
             return new XiamenFragment();
         }
     }
@@ -43,14 +40,11 @@ public class CategoryAdapter extends FragmentPagerAdapter{
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
             return mContext.getString(R.string.xian);
-        }
-        else if (position == 1){
+        } else if (position == 1) {
             return mContext.getString(R.string.beijing);
-        }
-        else if (position == 2){
+        } else if (position == 2) {
             return mContext.getString(R.string.shanghai);
-        }
-        else {
+        } else {
             return mContext.getString(R.string.nanjing);
         }
     }

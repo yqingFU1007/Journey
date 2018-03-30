@@ -2,43 +2,47 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:id="@+id/container"
-    tools:context="com.example.android.journey.ContentActivity">
-<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_1">
-    <LinearLayout
+    tools:context="com.example.android.journey.ContentActivity">
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/bing_ma_yong"
-            android:scaleType="centerCrop"/>
+        android:background="@color/blue_1">
 
-        <TextView
-            android:id="@+id/title"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="秦始皇陵兵马俑"
-            android:textSize="30sp"
-            android:textColor="#000000"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:id="@+id/content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="@string/huaqingchi_intro"
-            android:padding="20dp"
-            android:textStyle="bold"
-            android:textSize="15sp"/>
-    </LinearLayout>
-</ScrollView>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bing_ma_yong" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                tools:text="秦始皇陵兵马俑" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="@string/huaqingchi_intro" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

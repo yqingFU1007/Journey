@@ -15,19 +15,19 @@
             android:id="@+id/sliding_tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="false"
             android:background="@color/blue_7"
-            app:tabMaxWidth="0dp"
+            android:focusable="false"
             app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
             app:tabMode="fixed"
-            app:tabTextColor="@color/blue_2"
-            app:tabSelectedTextColor="@color/tab_color_1"/>
+            app:tabSelectedTextColor="@color/tab_color_1"
+            app:tabTextColor="@color/blue_2" />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/blue_1"/>
+            android:background="@color/blue_1" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -21,14 +21,14 @@ import java.util.List;
  * Created by apple on 2018/3/29.
  */
 
-public class PlacesAdapter extends ArrayAdapter<Places>{
+public class PlacesAdapter extends ArrayAdapter<Places> {
 
 
-    public PlacesAdapter(Activity context, ArrayList<Places> places){
-        super(context,0,places);
+    public PlacesAdapter(Activity context, ArrayList<Places> places) {
+        super(context, 0, places);
     }
 
-    final int[] colors = {R.color.blue_1,R.color.blue_2,R.color.blue_3,R.color.blue_4,R.color.blue_5,R.color.blue_6};
+    final int[] colors = {R.color.blue_1, R.color.blue_2, R.color.blue_3, R.color.blue_4, R.color.blue_5, R.color.blue_6};
 
 
     @NonNull
@@ -37,25 +37,24 @@ public class PlacesAdapter extends ArrayAdapter<Places>{
         // Check if the existing view is being reused, otherwise inflate the view
 
 
-
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
 
         Places placesCurrent = getItem(position);
 
-        int color = ContextCompat.getColor(getContext(),colors[position]);
+        int color = ContextCompat.getColor(getContext(), colors[position]);
 
 
-        ImageView imageView = (ImageView)listItemView.findViewById(R.id.place_image);
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.place_image);
         imageView.setImageResource(placesCurrent.getmImageIdSmall());
 
-        ImageView botton = (ImageView)listItemView.findViewById(R.id.botton);
+        ImageView botton = (ImageView) listItemView.findViewById(R.id.botton);
         botton.setBackgroundColor(color);
 
-        TextView textView = (TextView)listItemView.findViewById(R.id.place_name);
+        TextView textView = (TextView) listItemView.findViewById(R.id.place_name);
         textView.setText(placesCurrent.getmPlaceName());
 
         textView.setBackgroundColor(color);
